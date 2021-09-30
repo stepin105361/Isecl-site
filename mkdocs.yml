@@ -121,7 +121,7 @@ nav:
         - Deployment Steps: supplementary-guides/Common Cluster Deployment Guide/3Deployment Steps.md
         - Workload POD Launch Validation: supplementary-guides/Common Cluster Deployment Guide/4Workload POD Launch Validation.md
 theme:
-   name: material
+   name: mkdocs
    font: 
      code: Fira Code
      text: Helvetica               
@@ -148,13 +148,6 @@ theme:
     - navigation.indexes
     - navigation.top
     - search.suggest
-markdown_extensions:
-  - pymdownx.superfences
-  - pymdownx.details
-  - pymdownx.smartsymbols
-  - pymdownx.magiclink
-  - markdown.extensions.tables
 
-extra:
-  version:
-    provider: mike
+
+
