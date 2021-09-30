@@ -4,16 +4,6 @@ repo_url: https://github.com/stepin105361/Isecl-site
 site_name: Intel® SecL-DC
 plugins:
   - search 
-  - mkdocs-nav-enhancements
-  - mike:
-      # these fields are all optional; the defaults are as below...
-      version_selector: true   # set to false to leave out the version selector
-      css_dir: css             # the directory to put the version selector's CSS
-      javascript_dir: js       # the directory to put the version selector's JS
-      canonical_version: null  # the version for <link rel="canonical">; `null`
-                               # uses the version specified via `mike deploy`
-
-
 nav: 
   - Home:
     - Intel® Security Libraries for Data Center (Intel® SecL-DC): index.md
