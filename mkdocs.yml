@@ -111,7 +111,7 @@ nav:
         - Deployment Steps: supplementary-guides/Common Cluster Deployment Guide/3Deployment Steps.md
         - Workload POD Launch Validation: supplementary-guides/Common Cluster Deployment Guide/4Workload POD Launch Validation.md
 theme:
-   name: mkdocs
+   name: material
    font: 
      code: Fira Code
      text: Helvetica               
