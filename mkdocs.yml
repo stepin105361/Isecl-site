@@ -138,6 +138,5 @@ theme:
     - navigation.indexes
     - navigation.top
     - search.suggest
-
-
-
+markdown_extensions:
+- admonition
