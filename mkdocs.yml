@@ -139,6 +139,9 @@ theme:
     - navigation.top
     - search.suggest
 markdown_extensions:
-- admonition
-- pymdownx.details
-- pymdownx.superfences
+ - admonition
+ - pymdownx.details
+ - pymdownx.superfences
+ - pymdownx.smartsymbols
+ - pymdownx.magiclink
+ - markdown.extensions.tables
