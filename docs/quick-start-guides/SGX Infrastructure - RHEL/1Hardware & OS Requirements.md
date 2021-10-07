@@ -2,13 +2,13 @@
 
 ## Four Hosts or VMs
 
-    Build System
+* Build System
 
-    CSP managed Services 
+* CSP managed Services 
 
-    Enterprise Managed Services
+* Enterprise Managed Services
 
-    Orchestrator Node Setup
+* Orchestrator Node Setup
 
 ## SGX Enabled Host
 
