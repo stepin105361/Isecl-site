@@ -1,4 +1,4 @@
-# Network Requirements  Changed this one too.
+# Network Requirements
 
 Internet access is required for the following
 
