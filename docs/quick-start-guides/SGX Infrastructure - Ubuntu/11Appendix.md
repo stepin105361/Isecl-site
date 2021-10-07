@@ -6,8 +6,8 @@ To Deploy SampleApp:
   Copy sample_apps.tar, sample_apps.sha2 and sampleapps_untar.sh from binaries directory to a directory in SGX compute node and untar it using './sample_apps_untar.sh'
   Install Intel® SGX SDK for Linux*OS into /opt/intel/sgxsdk using './install_sgxsdk.sh'
   Install SGX dependencies using './deploy_sgx_dependencies.sh'
-???+ note 
-    Make sure to deploy SQVS with includetoken configuration as false. 
+
+Note : Make sure to deploy SQVS with includetoken configuration as false. 
 
 To Verify the SampleApp flow:
   Update sample_apps.conf with the following
