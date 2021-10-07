@@ -1,4 +1,4 @@
-# Hardware & OS Requirements  Changed heading to see the version selector functionality
+# Hardware & OS Requirements
 
 ## Four Hosts or VMs
 
