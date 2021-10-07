@@ -144,13 +144,13 @@ A single-node deployment uses Microk8s to deploy the entire control plane in a p
 
 **Single Node:**
 
-![k8s-single-node](.\images\single-node-ws.jpg)
+![k8s-single-node](./images/single-node-ws.jpg)
 
 A multi-node deployment is a more typical Kubernetes architecture, where the Intel SecL management plane is simply deployed as a Pod, with the Intel SecL agents (the WLA and the TA, depending on use case) deployed as a DaemonSet.
 
 **Multi Node:**
 
-![K8s Deployment-fsws](.\images\k8s-deployment-ws.jpg)
+![K8s Deployment-fsws](./images/k8s-deployment-ws.jpg)
 
 
 
@@ -158,25 +158,25 @@ A multi-node deployment is a more typical Kubernetes architecture, where the Int
 
 Every service including databases will be deployed as separate K8s deployment with 1 replica, i.e(1 pod per deployment). Each deployment will be further exposed through k8s service and also will be having corresponding Persistent Volume Claims(PV) for configuration and log directories and mounted on persistent storage. In case of daemonsets/agents, the configuration and log directories will be mounted on respective Baremetal worker nodes.
 
-![](.\images\service-deployment.jpg)
+![](./images/service-deployment.jpg)
 
-![Each pod consist of only one container with service](.\images\daemonsets-ws.jpg)
+![Each pod consist of only one container with service](./images/daemonsets-ws.jpg)
 
 For stateful services which requires database like shvs, aas, scs, A separate database deployment will be created for each of such services. The data present on the database deployment will also made to persist on a NFS, through K8s persistent storage mechanism
 
-![database deployment](.\images\hvs-db.jpg)
+![database deployment](./images/hvs-db.jpg)
 
 
 
 **Networking within the Cluster:**
 
-![Networking within cluster](.\images\inter-cluster-communication-ws.jpg)
+![Networking within cluster](./images/inter-cluster-communication-ws.jpg)
 
 
 
 **Networking Outside the Cluster:**
 
-![Networking outside cluster](.\images\within-cluster-communication-ws.jpg)
+![Networking outside cluster](./images/within-cluster-communication-ws.jpg)
 
 ## Installing/Configuring the Database
 
