@@ -2,13 +2,13 @@
 
 Internet access is required for the following
 
-## Build System
+* Build System
 
-## CSP Managed Services
+* CSP Managed Services
 
-## Enterprise Managed Services
+* Enterprise Managed Services
 
-## SGX Enabled Host
+* SGX Enabled Host
 
 
 **Setting Proxy and No Proxy**
