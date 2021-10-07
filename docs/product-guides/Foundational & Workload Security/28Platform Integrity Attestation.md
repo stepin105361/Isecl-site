@@ -1,5 +1,4 @@
 # Platform Integrity Attestation 
-==============================
 
 Platform attestation is the cornerstone use case for ISecL. Platform
 attestation involves taking measurements of system components during
@@ -84,7 +83,7 @@ Groups, and Flavor matching.
 
 #### Sample Call
 
-```
+```json
 POST https://verification.service.com:8443/hvs/v2/hosts
 Authorization: Bearer <token>
 
@@ -100,7 +99,7 @@ Requires the permission `hosts:create`
 
 #### Sample Call for ESXi Cluster Registration
 
-```
+```json
 POST https://verification.service.com:8443/hvs/v2/hosts
 Authorization: Bearer <token>
 
@@ -164,7 +163,7 @@ perhaps an OS kernel with a known security vulnerability.
 
 ### Importing a Flavor from a Sample Host
 
-```
+```json
 POST https://verification.service.com:8443/hvs/v2/flavors
 Authorization: Bearer <token>
 
@@ -182,7 +181,7 @@ Requires the permission `flavors:create`
 
 To import ONLY the HOST\_UNIQUE Flavor part from a host:
 
-```
+```json
 POST https://verification.service.com:8443/hvs/v2/flavors
 Authorization: Bearer <token>
 
@@ -202,7 +201,7 @@ host) if the required information is known. If no Flavorgroup is
 specified, the Flavor will be placed in the `automatic` group. Note that
 the `label` is a required field and must be unique.
 
-```
+```json
 POST https://verification.service.com:8443/hvs/v2/flavors
 Authorization: Bearer <token>
 
@@ -274,7 +273,7 @@ will fail as the Flavor already exists.
 
 To import the `SOFTWARE` Flavor part from a host:
 
-```
+```json
 POST https://verification.service.com:8443/hvs/v2/flavors
 Authorization: Bearer <token>
 
@@ -311,7 +310,7 @@ any number of key/value pairs. Note that one certificate must be created
 for each host to be tagged, even if they will all be tagged with
 identical key/value pairs.
 
-```
+```json
 POST https://verification.service.com:8443/hvs/v2/tag-certificates
 Authorization: Bearer <token>
 
@@ -342,7 +341,7 @@ Asset Tags can be provisioned to a Windows or RHEL host via a REST API
 request on the Verification Service that will in turn make a request to
 the Trust Agent on the host to be tagged.
 
-```
+```json
 POST https://verification.service.com:8443/hvs/v2/rpc/deploy-tag-certificate
 Authorization: Bearer <token>
 
@@ -379,7 +378,7 @@ the TPM, due to the low size of the NVRAM.
     retrieved either from the response when the Asset Tag certificate is
     created, or by using a GET API request to retrieve the certificate:
     
-    ```
+    ```json
     GET https://verification.service.com:8443/hvs/v2/tag-certificates?subjectEqualTo=<HardwareUUID>
     Authorization: Bearer <token>
     ```
@@ -469,7 +468,7 @@ created during the Tag Provisioning step, for VMWare ESXi hosts the
 Flavor must be created by importing it from the host after the Tag has
 been provisioned.
 
-```
+```json
 POST https://verification.service.com:8443/hvs/v2/flavors
 Authorization: Bearer <token>
 
@@ -515,7 +514,7 @@ Automatic Flavor matching makes this process relatively simple:
     received the upgrade. Be sure to create new Flavors for each TPM
     version represented in your datacenter.
     
-    ```
+    ```json
     POST https://verification.service.com:8443/hvs/v2/flavors
     Authorization: Bearer <token>
     
@@ -694,7 +693,7 @@ anywhere between 2-7 seconds to generate.
 
 ### Sample Call – Generating a New Attestation Report
 
-```
+```json
 POST https://verification.service.com:8443/hvs/v2/reports
 Authorization: Bearer <token>
 
