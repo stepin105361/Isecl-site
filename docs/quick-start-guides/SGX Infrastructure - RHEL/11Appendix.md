@@ -1,26 +1,29 @@
 # Appendix 
 
 ## SGX Attestation flow
-```
+
 To Deploy SampleApp:
-  Copy sample_apps.tar, sample_apps.sha2 and sampleapps_untar.sh from binaries directory to a directory in SGX compute node and untar it using './sample_apps_untar.sh'
-  Install Intel® SGX SDK for Linux*OS into /opt/intel/sgxsdk using './install_sgxsdk.sh'
-  Install SGX dependencies using './deploy_sgx_dependencies.sh'
+
+* Copy sample_apps.tar, sample_apps.sha2 and sampleapps_untar.sh from binaries directory to a directory in SGX compute node and untar it using `./sample_apps_untar.sh`
+* Install Intel® SGX SDK for Linux*OS into /opt/intel/sgxsdk using `./install_sgxsdk.sh`
+* Install SGX dependencies using `./deploy_sgx_dependencies.sh`
+
 ???+ note 
     Make sure to deploy SQVS with includetoken configuration as false. 
 
 To Verify the SampleApp flow:
-  Update sample_apps.conf with the following
-   - IP address for SQVS services deployed on Enterprise system
-   - IP address for SCS services deployed on CSP system
-   - ENTERPRISE_CMS_IP should point to the IP of CMS service deployed on Enterprise system
-   - Network Port numbers for SCS services deployed on CSP system
-   - Network Port numbers for SQVS and CMS services deployed on Enterprise system
-   - Set RUN_ATTESTING_APP to yes if user wants to run both apps in same machine
-  Run SampleApp using './run_sample_apps.sh'
-  Check the output of attestedApp and attestingApp under out/attested_app_console_out.log and out/attesting_app_console_out.log files
+
+* Update sample_apps.conf with the following
+	* IP address for SQVS services deployed on Enterprise system
+	* IP address for SCS services deployed on CSP system
+	* ENTERPRISE_CMS_IP should point to the IP of CMS service deployed on Enterprise system
+	* Network Port numbers for SCS services deployed on CSP system
+	* Network Port numbers for SQVS and CMS services deployed on Enterprise system
+	* Set RUN_ATTESTING_APP to yes if user wants to run both apps in same machine
+* Run SampleApp using `./run_sample_apps.sh`
+* Check the output of attestedApp and attestingApp under out/attested_app_console_out.log and out/attesting_app_console_out.log files
  
-```
+
 ## Creating RSA Keys in Key Broker Service
 
 **Steps to run KMIP Server**
