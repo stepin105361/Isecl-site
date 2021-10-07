@@ -34,9 +34,10 @@ The unique host identifier is a unique ID used by NATS to differentiate services
 
 ### Importing VMware TLS Certificates
 
+
 Before connecting to vCenter to register hosts or clusters, the vCenter TLS certificate needs to be imported to the Verification Service.  This must be done for each vCenter server that the Verification Service will connect to, for importing Flavors or registering hosts.
 
-1. Download the root CA certs from vCenter:
+* Download the root CA certs from vCenter:
 
    ```shell
    wget --no-proxy "*" https://<vCenter IP or hostname>/certs/download.zip --no-check-certificate
@@ -52,9 +53,9 @@ Before connecting to vCenter to register hosts or clusters, the vCenter TLS cert
    
    
 
-2. Upload the certificates to the HVS
+* Upload the certificates to the HVS
 
-   ```http
+   ```json
    POST https://%3CIP%3E:8443/hvs/v2/ca-certificates
    
    {
@@ -68,8 +69,7 @@ Before connecting to vCenter to register hosts or clusters, the vCenter TLS cert
     Please make sure that the certificate does not contain any other characters other than the base64 characters like that of `\n` or `-----BEGIN CERTIFICATE-----` etc.
 
 
-
-3. After upload is successful, restart the HVS
+* After upload is successful, restart the HVS
 
    ```shell
    hvs restart
