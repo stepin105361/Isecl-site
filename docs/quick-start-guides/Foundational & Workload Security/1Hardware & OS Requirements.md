@@ -1,4 +1,4 @@
-# Hardware & OS Requirements Trying to see the web hook 
+# Hardware & OS Requirements
 
 ## Physical Server requirements
 
