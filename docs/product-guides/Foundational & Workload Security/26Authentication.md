@@ -81,7 +81,7 @@ Usernames have the following requirements:
 
 ### Create User
 
-```
+```json
 POST https://<IP or hostname of AAS>:8444/aas/v1/users
 Authorization: Bearer <token>
 
@@ -99,7 +99,7 @@ GET https://<IP or hostname of AAS>:8444/aas/v1/users?name=<value>
 
 ### Change User Password
 
-```
+```json
 PATCH https://<IP or hostname of AAS>:8444/aas/v1/users/changepassword
 Authorization: Bearer <token>
 {
@@ -135,7 +135,7 @@ applicable for that service in the AAS.
 
 ### Create Role
 
-```
+```json
 POST https://<AAS IP or Hostname>:8444/aas/v1/roles
 Authorization: Bearer <token>
 
@@ -145,6 +145,7 @@ Authorization: Bearer <token>
     "permissions": [<array of permissions>]
 }
 ```
+
 
 -   `service` field contains a minimum of 1 and maximum of 20 characters.
     Allowed characters are alphanumeric plus the special charecters -,
@@ -170,14 +171,14 @@ the API resource and method definitions in the API documentation.
 
 ### Search Roles
 
-```
+```json
 GET https://<AAS IP or Hostname>:8444/aas/v1/roles?<parameter>=<value>
 Authorization: Bearer <token>
 ```
 
 Search parameters supported:
 
-```
+```json
 Service=<name of service>
 Name=<role name>
 Context=<context>
@@ -188,14 +189,14 @@ filter=false
 
 ### Delete Role
 
-```
+```json
 DELETE https://<AAS IP or Hostname>:8444/aas/v1/roles/<role ID>
 Authorization: Bearer <token>
 ```
 
 ### Assign Role to User
 
-```
+```json
 POST https://<AAS IP or Hostname>:8444/aas/v1/users/<user ID>/roles
 Authorization: Bearer <token>
 
@@ -206,14 +207,14 @@ Authorization: Bearer <token>
 
 ### List Roles Assigned to User
 
-```
+```json
 GET https://<AAS IP or Hostname\>:8444/aas/v1/users/<user ID>/roles
 Authorization: Bearer <token>
 ```
 
 ### Remove Role from User
 
-```
+```json
 DELETE https://<AAS IP or Hostname>:8444/aas/v1/users/<userID>/roles/<role ID>
 Authorization: Bearer <token>
 ```
