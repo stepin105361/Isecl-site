@@ -140,6 +140,8 @@ theme:
     - search.suggest
 extra_css:
 - assets/versions.css
+extra_javascript:
+- assets/versions.js
 markdown_extensions:
  - admonition
  - pymdownx.details
