@@ -3,3 +3,5 @@ formats: all
 python:
   install:
     - requirements: docs/requirements.txt
+mkdocs:
+ configuration: mkdocs.yml
