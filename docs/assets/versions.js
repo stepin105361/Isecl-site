@@ -28,6 +28,6 @@ setTimeout(function() {
 
   var script = document.createElement('script');
   script.src = 'https://isecl-site.readthedocs.io/_/api/v2/footer_html/?'+
-      'callback=' + callbackName + '&isecl-site&page=&theme=mkdocs&format=jsonp&docroot=docs&source_suffix=.md&version=' + (window['READTHEDOCS_DATA'] || { version: 'latest' }).version;
+      'callback=' + callbackName + '&project-isecl-site&page=&theme=mkdocs&format=jsonp&docroot=docs&source_suffix=.md&version=' + (window['READTHEDOCS_DATA'] || { version: 'latest' }).version;
   document.getElementsByTagName('head')[0].appendChild(script);
 }, 0);
