@@ -39,7 +39,7 @@ window.addEventListener("DOMContentLoaded", function() {
   var margin = 30;
   var headerHeight = document.getElementsByClassName("md-header")[0].offsetHeight; 
   if (rtdData.version === "latest") {
-    document.querySelector("div[data-md-component=announce]").innerHTML = "<div id='announce-msg'>You are viewing the docs for an unreleased version of ISeCl, <a href='https://isecl-site.readthedocs.io/en/latest/'>click here to go to the latest stable version.</a></div>"
+    document.querySelector("div[data-md-component=announce]").innerHTML = "<div id='announce-msg'>You are not viewing the stable version of the ISeCl docs, <a href='https://isecl-site.readthedocs.io/en/4.0/'>click here to go to the latest stable version.</a></div>"
     var bannerHeight = document.getElementById('announce-msg').offsetHeight + margin
     document.querySelector("header.md-header").style.top = bannerHeight +"px";   
     document.querySelector('style').textContent +=
@@ -47,8 +47,8 @@ window.addEventListener("DOMContentLoaded", function() {
     document.querySelector('style').textContent +=
     "@media screen and (min-width: 60em){ .md-sidebar--secondary { height: 0;  top:"+ (bannerHeight+headerHeight)+"px !important; }}"
   }
-  else if (rtdData.version !== "stable") {
-    document.querySelector("div[data-md-component=announce]").innerHTML = "<div id='announce-msg'>You are viewing the docs for a previous version of ISeCl, <a href='https://isecl-site.readthedocs.io/en/latest/'>click here to go to the latest stable version.</a></div>"
+  else if (rtdData.version !== "4.0") {
+    document.querySelector("div[data-md-component=announce]").innerHTML = "<div id='announce-msg'>You are viewing the docs for a previous version of ISeCl, <a href='https://isecl-site.readthedocs.io/en/4.0/'>click here to go to the latest stable version.</a></div>"
     var bannerHeight = document.getElementById('announce-msg').offsetHeight + margin
     document.querySelector("header.md-header").style.top = bannerHeight +"px";   
     document.querySelector('style').textContent +=
